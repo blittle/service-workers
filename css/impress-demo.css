@@ -85,13 +85,20 @@ body {
     font-family: 'PT Sans', sans-serif;
     min-height: 740px;
 
-    background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
-    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: #222222;
+		color: #eeeeee;
+}
+
+body::after {
+	background: url(star-map.png);
+	content: "";
+	opacity: 0.2;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
 }
 
 /*
@@ -218,7 +225,7 @@ a:focus {
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
 
-    color: rgb(102, 102, 102);
+		color: white;
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
 
     font-family: 'Open Sans', Arial, sans-serif;
@@ -255,10 +262,10 @@ a:focus {
 }
 
 #title .try {
-    font-size: 64px;
+    font-size: 44px;
     position: absolute;
-    top: -0.5em;
-    left: 1.5em;
+    top: -0.8em;
+    left: 1.8em;
 
     -webkit-transform: translateZ(20px);
     -moz-transform:    translateZ(20px);
@@ -268,7 +275,8 @@ a:focus {
 }
 
 #title h1 {
-    font-size: 190px;
+    font-size: 120px;
+		text-align: center;
 
     -webkit-transform: translateZ(50px);
     -moz-transform:    translateZ(50px);
@@ -279,6 +287,8 @@ a:focus {
 
 #title .footnote {
     font-size: 32px;
+		display: block;
+		text-align: center;
 }
 
 /*
