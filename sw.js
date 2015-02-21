@@ -9,13 +9,14 @@ var urlsToCache = [
 
 self.addEventListener('install', function(event) {
 	console.log('hi', caches)
-	//event.waitUntil(
-	//	caches.open(CACHE_NAME)
-	//	.then(function(cache) {
-	//		console.log('Opened cache');
-	//		return cache.addAll(urlsToCache);
-	//	})
-	//);
+	event.waitUntil(
+		caches.open(CACHE_NAME)
+		.then(function(cache) {
+			console.log('Opened cache');
+			return "hi'";
+			//return cache.addAll(urlsToCache);
+		})
+	);
 })
 
 //self.addEventListener('fetch', function(event) {
