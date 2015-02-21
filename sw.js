@@ -3,8 +3,8 @@ var urlsToCache = [
   'index.html',
 	'favicon.png',
 	'apple-touch-icon.png',
-  '/css/impress-demo.css',
-  '/js/impress.js'
+  'css/impress-demo.css',
+  'js/impress.js'
 ];
 
 self.addEventListener('install', function(event) {
@@ -13,8 +13,7 @@ self.addEventListener('install', function(event) {
 		caches.open(CACHE_NAME)
 		.then(function(cache) {
 			console.log('Opened cache');
-			return "hi'";
-			//return cache.addAll(urlsToCache);
+			return cache.addAll(urlsToCache);
 		})
 	);
 })
