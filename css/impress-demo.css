@@ -79,7 +79,7 @@ table {
 	font-family: 'Open Sans';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Open Sans'), local('OpenSans'), url(OpenSans-Regular.ttf) format('ttf');
+	src: local('Open Sans'), local('OpenSans'), url(OpenSans-Regular.ttf) format('truetype');
 }
 
 /*
