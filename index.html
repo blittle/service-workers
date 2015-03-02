@@ -174,9 +174,11 @@
         
     -->
     <div id="title" class="step" data-x="0" data-y="0" data-scale="1">
-			<span class="try">making offline suck less with</span>
-				<h1>Service Workers</h1>
-				<span class="footnote">Bret Little - @little_bret</span>
+			<h1>Making Offline Suck Less with Service Workers</h1>
+			<span class="footnote">Bret Little - @little_bret</span>
+			<center class="margin-top-30">
+				<img src="css/mwjs.png"/>
+			</center>
     </div>
 
     <!--
@@ -187,23 +189,161 @@
         element should be rotated by 90 degrees clockwise.
         
     -->
-    <div id="its" class="step" data-x="1500" data-y="100" data-z="1500" data-rotate="10">
-        <p>It's a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+    <div id="its" class="step" data-x="1500">
+			One of the main reasons native apps are often chosen over web apps is that the web totally sucks in providing a decent offline experience.
     </div>
 
-    <div id="big1" class="step" data-x="3000" data-y="200" data-z="3000" data-rotate="20">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    <div id="big1" class="step text-center" data-x="3000">
+			<center>
+				APP CACHE?
+			</center>
+			<center>&nbsp;</center>
     </div>
 
-    <div id="big2" class="step" data-x="4500" data-y="300" data-z="4500" data-rotate="30">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    <div id="big2" class="step text-center" data-x="3000" data-rotate-x="90">
+			<center>
+				APP CACHE?
+			</center>
+
+			<center style="font-size: 32px;">
+				http://alistapart.com/article/application-cache-is-a-douchebag
+			</center>
     </div>
 
-    <div id="big3" class="step" data-x="6000" data-y="400" data-z="6000" data-rotate="40">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    <div id="big3" class="step" data-x="4500" data-rotate-x="90">
+			<center>
+				Service Workers
+			</center>
     </div>
+
+    <div id="big4" class="step" data-x="6000" data-rotate-x="90">
+			<center>
+				<img src="css/programmer.jpg"/>
+			</center>
+    </div>
+
+    <div id="big5" class="step" data-x="7500" data-rotate-x="90">
+			A Service Worker is an independent but shared execution thread for all pages on your domain.
+    </div>
+
+    <div id="big6" class="step" data-x="7500" data-z="1500" data-rotate-x="90">
+			<ul>
+				<li>Cannot access the DOM</li>
+				<li>Communicates with the pages it controls through events</li>
+				<li>No shared data</li>
+				<li>Requires SSL</li>
+			</ul>
+    </div>
+
+    <div id="big7" class="step" data-x="7500" data-z="1818" data-rotate-x="90">
+			Requires SSL
+		</div>
+
+    <div id="big8" class="step" data-x="6000" data-z="1842" data-rotate-x="90">
+			Network proxy API which can intercept all http requests to the hosted domain.
+			<center class="margin-top-30">
+				<img src="css/fetch.png" width="1080"/>
+			</center>
+    </div>
+
+    <div id="big9" class="step" data-x="4500" data-z="1842" data-rotate-x="90">
+			Caching API for storing responses keyed by request
+			<center class="margin-top-30">
+				<img src="css/cache.png" width="1080"/>
+			</center>
+    </div>
+
+    <div id="big10" class="step" data-x="3000" data-z="1842" data-rotate-x="90">
+			Native Promises!
+			<center class="margin-top-30">
+				<img src="css/promises.png" width="1080"/>
+			</center>
+    </div>
+
+    <div id="big11" class="step" data-x="1500" data-z="1842" data-rotate-x="90">
+			Is it Ready?
+			<center class="margin-top-30">
+				<img src="css/browsers.png" width="1080"/>
+			</center>
+			<center class="margin-top-30">
+				https://jakearchibald.github.io/isserviceworkerready/
+			</center>
+    </div>
+
+    <div id="big12" class="step" data-x="0" data-z="1842" data-rotate-x="90">
+			Service Workers Life-Cycle
+			<center class="margin-top-30">
+				<img src="css/chart.png" width="1080"/>
+			</center>
+		</div>
+
+    <div id="big13" class="step" data-x="0" data-z="3000" data-rotate-x="90">
+			Register a service worker within the main app thread
+			<center class="margin-top-30">
+				<img src="css/register.png" width="1080"/>
+			</center>
+		</div>
+
+    <div id="big15" class="step" data-x="1500" data-z="3000" data-rotate-x="90">
+			Worker thread installation
+			<center class="margin-top-30">
+				<img src="css/install.png" width="1080"/>
+			</center>
+		</div>
+
+    <div id="big16" class="step" data-x="3000" data-z="3000" data-rotate-x="90">
+			Worker thread activation
+			<center class="margin-top-30">
+				<img src="css/activate.png" width="1080"/>
+			</center>
+		</div>
+
+    <div id="big17" class="step" data-x="4500" data-z="3000" data-rotate-x="90">
+			<center>
+				Automatically started and terminated as needed - as a result, the worker state needs to be persisted.
+			</center>
+		</div>
+
+    <div id="big18" class="step" data-x="6000" data-z="3000" data-rotate-x="90">
+			<center>
+				DEMO
+				<br>
+				Right-click page => inspect element
+			</center>
+		</div>
+
+    <div id="big19" class="step" data-x="7500" data-z="3000" data-rotate-x="90">
+			<center>
+				Service Worker Composer
+				<br>
+				https://github.com/blittle/service-composer
+			</center>
+		</div>
+
+    <div id="big20" class="step" data-x="9000" data-z="3000" data-rotate-x="90">
+			<center>
+				<img src="css/composer.png" width="1000"/>
+			</center>
+		</div>
+
+    <div id="big21" class="step" data-x="10500" data-z="3000" data-rotate-x="90">
+			Other related specifications:
+			<ul class="margin-top-30" style="font-size: 32px;">
+				<li>Push - http://w3c.github.io/push-api/</li>
+				<li>Background sync - https://github.com/slightlyoff/BackgroundSync</li>
+				<li>Geofencing - https://github.com/slightlyoff/Geofencing</li>
+			</ul>
+    </div>
+
+    <div id="big22" class="step" data-x="13000" data-z="3000" data-rotate-x="90">
+			References and Additional Information:
+			<ul class="margin-top-30" style="font-size: 32px; list-style-type: circle;">
+				<li>https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers</li>
+				<li>https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker</li>
+				<li>https://github.com/slightlyoff/ServiceWorker</li>
+				<li>http://www.html5rocks.com/en/tutorials/service-worker/introduction/</li>
+			</ul>
+		</div>
     <!--
         
         And now it gets really exciting! We move into third dimension!

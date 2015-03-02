@@ -58,7 +58,7 @@ body {
     line-height: 1;
 }
 ol, ul {
-    list-style: none;
+	list-style-type: circle;
 }
 blockquote, q {
     quotes: none;
@@ -82,15 +82,17 @@ table {
     want to leave anybody behind.
 */
 body {
-    font-family: 'PT Sans', sans-serif;
+		font-family: 'Open Sans', sans-serif;
     min-height: 740px;
 
-    background: #222222;
+    background: black;
 		color: #eeeeee;
 }
 
 body::after {
+	/*
 	background: url(star-map.png);
+	*/
 	content: "";
 	opacity: 0.2;
 	top: 0;
@@ -172,8 +174,9 @@ a:focus {
 
 .step {
     position: relative;
-    width: 900px;
-    padding: 40px;
+    width: 1080px;
+		height: 600px;
+    /*padding: 40px;*/
     margin: 20px auto;
 
     -webkit-box-sizing: border-box;
@@ -182,9 +185,9 @@ a:focus {
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
 
-    font-family: 'PT Serif', georgia, serif;
-    font-size: 48px;
-    line-height: 1.5;
+    font-family: 'Open Sans', georgia, serif;
+    font-size: 44px;
+    line-height: 1.8;
 }
 
 /*
@@ -263,9 +266,6 @@ a:focus {
 
 #title .try {
     font-size: 44px;
-    position: absolute;
-    top: -0.8em;
-    left: 1.8em;
 
     -webkit-transform: translateZ(20px);
     -moz-transform:    translateZ(20px);
@@ -274,8 +274,17 @@ a:focus {
     transform:         translateZ(20px);
 }
 
+.text-center {
+	text-align: center;
+}
+
+.margin-top-30 {
+	margin-top: 30px;
+}
+
+
 #title h1 {
-    font-size: 120px;
+    font-size: 41px;
 		text-align: center;
 
     -webkit-transform: translateZ(50px);
@@ -286,8 +295,9 @@ a:focus {
 }
 
 #title .footnote {
-    font-size: 32px;
+    font-size: 24px;
 		display: block;
+		margin-top: 24px;
 		text-align: center;
 }
 
