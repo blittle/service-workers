@@ -3,11 +3,11 @@ importScripts('js/serviceworker-cache-polyfill.js');
 var CACHE_NAME = 'my-site-cache-v1';
 
 var urlsToCache = [
-  'index.html',
+	'index.html',
 	'favicon.png',
 	'apple-touch-icon.png',
-  'css/impress-demo.css',
-  'js/impress.js'
+	'css/impress-demo.css',
+	'js/impress.js',
 
 	'css/activate.png',
 	'css/browsers.png',
@@ -37,12 +37,12 @@ self.addEventListener('activate', function(event) {
 	// Clear out any old caches that are no longer active
 	event.waitUntil(
 		caches.keys().then(function(cacheNames) {
-			cacheNames.map(function(cacheName) {
-				if(CACHE_NAME !== cacheName) {
-					return caches.delete(cacheName);
-				}
-			});
-		})
+		cacheNames.map(function(cacheName) {
+			if(CACHE_NAME !== cacheName) {
+				return caches.delete(cacheName);
+			}
+		});
+	})
 	)
 });
 
@@ -66,26 +66,26 @@ self.addEventListener('fetch', function(event) {
 			// Make the external resource request
 			return fetch(fetchRequest).then(
 				function(response) {
-					// If we do not have a valid response, immediately return the error response
-					// so that we do not put the bad response into cache
-					if (!response || response.status !== 200 || response.type !== 'basic') {
-						return response;
-					}
-
-					// IMPORTANT: Clone the response. A response is a stream
-					// and because we want the browser to consume the response
-					// as well as the cache consuming the response, we need
-					// to clone it so we have 2 stream.
-					var responseToCache = response.clone();
-
-					// Place the request response within the cache
-					caches.open(CACHE_NAME)
-						.then(function(cache) {
-							cache.put(event.request, responseToCache);
-						});
-
+				// If we do not have a valid response, immediately return the error response
+				// so that we do not put the bad response into cache
+				if (!response || response.status !== 200 || response.type !== 'basic') {
 					return response;
 				}
+
+				// IMPORTANT: Clone the response. A response is a stream
+				// and because we want the browser to consume the response
+				// as well as the cache consuming the response, we need
+				// to clone it so we have 2 stream.
+				var responseToCache = response.clone();
+
+				// Place the request response within the cache
+				caches.open(CACHE_NAME)
+				.then(function(cache) {
+					cache.put(event.request, responseToCache);
+				});
+
+				return response;
+			}
 			);
 		})
 	);
