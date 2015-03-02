@@ -74,6 +74,14 @@ table {
     border-spacing: 0;
 }
 
+/* latin-ext */
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Open Sans'), local('OpenSans'), url(OpenSans-Regular.ttf) format('ttf');
+}
+
 /*
     Now here is when interesting things start to appear.
 

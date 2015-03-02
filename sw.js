@@ -1,6 +1,6 @@
 importScripts('js/serviceworker-cache-polyfill.js');
 
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'my-site-cache-v2';
 
 var urlsToCache = [
 	'index.html',
@@ -20,7 +20,9 @@ var urlsToCache = [
 	'css/programmer.jpg',
 	'css/promises.png',
 	'css/register.png',
-	'css/star-map.png'
+	'css/star-map.png',
+
+	'css/OpenSans-Regular.ttf'
 ];
 
 self.addEventListener('install', function(event) {
